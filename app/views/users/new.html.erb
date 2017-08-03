@@ -1,7 +1,8 @@
 <h1>Signup for Jungle</h1>
 
 <%= form_for :user, url: '/users' do |f| %>
-  Full Name: <%= f.text_field :name %><br>
+  First Name: <%= f.text_field :name %><br>
+  Last Name: <%= f.text_field :lname %><br>
   Email: <%= f.text_field :email %><br>
   Password: <%= f.password_field :password %><br>
   Password Confirmation: <%= f.password_field :password_confirmation %><br>
