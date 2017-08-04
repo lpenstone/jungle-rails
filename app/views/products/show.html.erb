@@ -24,36 +24,43 @@
           <dd><%= @product.price %></dd>
           <dt><h3>Reviews</h3></dt>
           <dd></dd>
-            <% @reviews.each do |review| %>
-          <dt> <%= review.user.name %> <%= review.user.lname %> </dt>
-          <dd><strong> Rating: <%= review.rating %></strong> <br> <%= review.description %></dd>
+          <% if @reviews.count > 0 %>
+            <dd></dd>
+              <% @reviews.each do |review| %>
+                <dt> <%= review.user.name %> <%= review.user.lname %> </dt>
+                <dd><strong> Rating: <%= review.rating %></strong> <br> <%= review.description %></dd>
+              <% end %>
+          <% else %>
+            <dt> Oh no! </dt>
+            <dd>This product has not yet been reviewed.</dd>
           <% end %>
         </dl>
       </div>
     </div>
 
-    <h3>Add Review</h3>
-      <%= form_for ([@product, @review]) do |form| %>
-        <% if form.object.errors.any? %>
-          <div class="alert alert-danger">
-            <strong>The following errors prevented saving:</strong>
-            <ul>
-              <% form.object.errors.full_messages.each do |error| %>
-                <li><%= error %></li>
-              <% end %>
-            </ul>
+    <% if current_user %>
+      <h3>Add Review</h3>
+        <%= form_for ([@product, @review]) do |form| %>
+          <% if form.object.errors.any? %>
+            <div class="alert alert-danger">
+              <strong>The following errors prevented saving:</strong>
+              <ul>
+                <% form.object.errors.full_messages.each do |error| %>
+                  <li><%= error %></li>
+                <% end %>
+              </ul>
+            </div>
+          <% end %>
+
+          <div class="form-group">
+            <%= form.label :rating %>
+            <%= form.select :rating, [1,2,3,4,5], include_blank: true, class: 'form-control' %><br>
+            <%= form.label :description %>
+            <%= form.text_field :description, class: 'form-control' %>
           </div>
+          <%= form.submit 'Add Review', class: 'btn btn-primary' %>
         <% end %>
-
-        <div class="form-group">
-          <%= form.label :rating %>
-          <%= form.select :rating, [1,2,3,4,5], include_blank: true, class: 'form-control' %><br>
-          <%= form.label :description %>
-          <%= form.text_field :description, class: 'form-control' %>
-        </div>
-        <%= form.submit 'Add Review', class: 'btn btn-primary' %>
       <% end %>
-
   </article>
 
 </section>
