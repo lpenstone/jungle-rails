@@ -50,27 +50,27 @@
 
     <% if current_user %>
       <h3>Add Review</h3>
-        <%= form_for ([@product, @review]) do |form| %>
-          <% if form.object.errors.any? %>
-            <div class="alert alert-danger">
-              <strong>The following errors prevented saving:</strong>
-              <ul>
-                <% form.object.errors.full_messages.each do |error| %>
-                  <li><%= error %></li>
-                <% end %>
-              </ul>
-            </div>
-          <% end %>
-
-          <div class="form-group">
-            <%= form.label :rating %>
-            <%= form.select :rating, [1,2,3,4,5], include_blank: true, class: 'form-control' %><br>
-            <%= form.label :description %>
-            <%= form.text_field :description, class: 'form-control' %>
+      <%= form_for ([@product, @review]) do |form| %>
+        <% if form.object.errors.any? %>
+          <div class="alert alert-danger">
+            <strong>The following errors prevented saving:</strong>
+            <ul>
+              <% form.object.errors.full_messages.each do |error| %>
+                <li><%= error %></li>
+              <% end %>
+            </ul>
           </div>
-          <%= form.submit 'Add Review', class: 'btn btn-primary' %>
         <% end %>
+
+        <div class="form-group">
+          <%= form.label :rating %>
+          <%= form.select :rating, [1,2,3,4,5], include_blank: true, class: 'form-control' %><br>
+          <%= form.label :description %>
+          <%= form.text_field :description, class: 'form-control' %>
+        </div>
+        <%= form.submit 'Add Review', class: 'btn btn-primary' %>
       <% end %>
+    <% end %>
   </article>
 
 </section>
