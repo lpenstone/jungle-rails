@@ -51,6 +51,9 @@
     </div>
   </div>
  <% else %>
- <p>You have no items in your cart! Get shopping!</p>
+  <p>You have no items in your cart!</p>
+  <p>
+    <%= link_to "Get Shopping!", "/", class: 'btn btn-primary' %>
+  </p>
  <% end %>
 </section>
