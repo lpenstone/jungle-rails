@@ -26,6 +26,14 @@
       </div>
     </div>
 
+    <div>
+    <% @reviews.each do |review| %>
+      <p> rating: <%= review.rating %> <p>
+      <p> description: <%= review.description %>
+    <% end %>
+
+    </div>
+
   </article>
 
 </section>

@@ -21,6 +21,17 @@ end
 
 # Let's do this ...
 
+## USERS
+
+# user1 = User.create!(id: 1, name: "Laura", email: "laura@test.com", password_digest: "password")
+# user2 = User.create!(id: 2, name: "Steve", email: "steve@test.com", password_digest: "password")
+# user3 = User.create!(id: 3, name: "Jim", email: "jim@test.com", password_digest: "password")
+
+## REVIEWS
+review1 = Review.create!(user_id: 1, product_id: 1, rating: 3, description: "Just ok!")
+review2 = Review.create!(user_id: 1, product_id: 1, rating: 4, description: "Liked it!")
+review3 = Review.create!(user_id: 1, product_id: 1, rating: 5, description: "Love it! So awesome!")
+
 ## CATEGORIES
 
 puts "Finding or Creating Categories ..."
