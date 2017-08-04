@@ -27,11 +27,21 @@
           <% if @reviews.count > 0 %>
             <dd></dd>
               <% @reviews.each do |review| %>
-                <dt> <%= review.user.name %> <%= review.user.lname %> </dt>
+                <dt>
+                  <% if current_user %>
+                    <% if review.user.id == current_user.id %>
+                      <span style="float:left; color: red;">
+                        <%= link_to fa_icon('trash'), product_review_path(@product.id, review.id), class: 'btn btn-sm btn-danger', method: :delete, data: { confirm: "Are you sure?" } %>
+                      </span>
+                    <% end %>
+                  <% end %>
+                  <%= review.user.name %>
+                  <%= review.user.lname %>
+                </dt>
                 <dd><strong> Rating: <%= review.rating %></strong> <br> <%= review.description %></dd>
               <% end %>
           <% else %>
-            <dt> Oh no! </dt>
+            <dt>Oh no! </dt>
             <dd>This product has not yet been reviewed.</dd>
           <% end %>
         </dl>
