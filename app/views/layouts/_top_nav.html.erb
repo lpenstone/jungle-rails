@@ -48,7 +48,7 @@
           <% if current_user %>
             <span> Welcome, <%= current_user.name %> <%= current_user.lname %> <%= link_to "Logout", '/sessions/destroy', method: :delete %> </span>
           <% else %>
-            <span> <%= link_to 'Login', '/sessions/new' %>  <%= link_to 'Signup', '/users/new' %> </span>
+            <span> <%= link_to 'Login', '/login' %>  <%= link_to 'Signup', '/register' %> </span>
           <% end %>
           </li>
       </ul>
