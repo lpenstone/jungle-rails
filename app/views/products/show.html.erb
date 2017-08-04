@@ -28,6 +28,7 @@
 
     <div>
     <% @reviews.each do |review| %>
+      <p> <strong> <%= review.user.name %> </strong> <p>
       <p> rating: <%= review.rating %> <p>
       <p> description: <%= review.description %>
     <% end %>
