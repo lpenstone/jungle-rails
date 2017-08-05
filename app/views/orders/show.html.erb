@@ -6,7 +6,9 @@
 
   <div class="order-summary jumbotron">
     <h4>Thank you for your order!</h4>
-    <p>It has been placed under the e-mail, <%= @order.email %></p><br>
+    <% if current_user %>
+      <p>It has been placed under the e-mail, <%= @order.email %></p><br>
+    <% end %>
     <h4>Order details:</h4>
       <div class="panel panel-default items">
       <table class="table table-bordered">
