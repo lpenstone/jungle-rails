@@ -22,3 +22,24 @@ A mini e-commerce application built with Rails 4.2.
 * Stripe
 
 ## Screenshots
+### Homepage:
+!["Homepage"](https://github.com/lpenstone/jungle-rails/blob/master/screenshots/jungle-homepage.png?raw=true)
+### Product details
+!["Product details"](https://github.com/lpenstone/jungle-rails/blob/master/screenshots/jungle-product-details.png?raw=true)
+### View cart
+!["View cart"](https://github.com/lpenstone/jungle-rails/blob/master/screenshots/jungle-cart.png?raw=true)
+!["Review orders after payment"](https://github.com/lpenstone/jungle-rails/blob/master/screenshots/jungle-order-review.png?raw=true)
+### View the sent order emails
+!["View the sent order emails"](https://github.com/lpenstone/jungle-rails/blob/master/screenshots/jungle-email.png?raw=true)
+### Admin permission: editing products
+!["Admin permission: editing products"](https://github.com/lpenstone/jungle-rails/blob/master/screenshots/jungle-products.png?raw=true)
+### Admin permission: editing categories
+!["Admin permission: editing categories"](https://github.com/lpenstone/jungle-rails/blob/master/screenshots/jungle-categories.png?raw=true)
+
+
+
+
+
+
+
+
