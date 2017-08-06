@@ -4,7 +4,6 @@ class OrdersController < ApplicationController
     @order = Order.find(params[:id])
   end
 
-
   def create
     charge = perform_stripe_charge
     order  = create_order(charge)
@@ -12,6 +11,7 @@ class OrdersController < ApplicationController
     if order.valid?
       empty_cart!
       redirect_to order, notice: 'Your Order has been placed.'
+      #If the user is logged in, send an email to confirm order.
       if current_user
         UserMailer.order_email(order).deliver_now
       end
@@ -60,7 +60,7 @@ class OrdersController < ApplicationController
     order
   end
 
-  # returns total in cents not dollars (stripe uses cents as well)
+  # returns total in cents
   def cart_total
     total = 0
     cart.each do |product_id, details|
