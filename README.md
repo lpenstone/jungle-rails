@@ -25,9 +25,16 @@ A mini e-commerce application built with Rails 4.2.
 ### Homepage:
 !["Homepage"](https://github.com/lpenstone/jungle-rails/blob/master/screenshots/jungle-homepage.png?raw=true)
 ### Product details
+- Read reviews
+- Log in to leave a review
+- Delete your posted reviews
 !["Product details"](https://github.com/lpenstone/jungle-rails/blob/master/screenshots/jungle-product-details.png?raw=true)
 ### View cart
+- Edit quantites
+- Remove items
+- View total cost of the order
 !["View cart"](https://github.com/lpenstone/jungle-rails/blob/master/screenshots/jungle-cart.png?raw=true)
+### Review order after payment
 !["Review orders after payment"](https://github.com/lpenstone/jungle-rails/blob/master/screenshots/jungle-order-review.png?raw=true)
 ### View the sent order emails
 !["View the sent order emails"](https://github.com/lpenstone/jungle-rails/blob/master/screenshots/jungle-email.png?raw=true)
