@@ -37,6 +37,7 @@ A mini e-commerce application built with Rails 4.2.
 ### Review order after payment
 !["Review orders after payment"](https://github.com/lpenstone/jungle-rails/blob/master/screenshots/jungle-order-review.png?raw=true)
 ### View the sent order emails
+- View demo emails at http://localhost:3000/letter_opener/
 !["View the sent order emails"](https://github.com/lpenstone/jungle-rails/blob/master/screenshots/jungle-email.png?raw=true)
 ### Admin permission: editing products
 !["Admin permission: editing products"](https://github.com/lpenstone/jungle-rails/blob/master/screenshots/jungle-products.png?raw=true)
