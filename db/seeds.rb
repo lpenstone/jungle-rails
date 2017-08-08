@@ -23,7 +23,7 @@ end
 
 ## USERS
 
-user1 = User.create!(id: 1, name: "Laura", email: "existing@example.com", password: "password", password_confirmation: "password")
+user1 = User.create!(id: 1, name: "Laura", lname: "Stone", email: "existing@example.com", password: "password", password_confirmation: "password")
 # user2 = User.create!(id: 2, name: "Steve", email: "steve@test.com", password_digest: "password")
 # user3 = User.create!(id: 3, name: "Jim", email: "jim@test.com", password_digest: "password")
 
