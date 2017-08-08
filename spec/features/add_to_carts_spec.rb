@@ -28,5 +28,5 @@ RSpec.feature "AddToCarts", type: :feature, js: true do
     # DEBUG
     save_screenshot('add_to_cart.png')
 
-    end
+  end
 end
